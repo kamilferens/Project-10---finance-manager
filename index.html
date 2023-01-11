@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script
+            src="https://kit.fontawesome.com/63681c7143.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Projekt 10 - Menedżer finansów</title>
+    </head>
+    <body>
+        <!-- IKONY -->
+        <!-- <i class="fa-solid fa-wallet"></i>
+        <i class="fa-solid fa-money-check-dollar"></i>
+        <i class="fa-solid fa-floppy-disk"></i>
+        <i class="fa-solid fa-xmark"></i>
+        <i class="fa-sharp fa-solid fa-xmark-large"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <i class="fa-solid fa-utensils"></i>
+        <i class="fa-solid fa-film"></i>
+        <i class="fa-solid fa-plus"></i>
+        <i class="fa-solid fa-trash"></i> -->
+
+        <header>
+            <h1><i class="fa-solid fa-wallet"></i> Wallet</h1>
+            <h2>Twój osobisty menedżer finansów</h2>
+        </header>
+        <div class="view">
+            <div class="transactions">
+                <h2>Lista transakcji</h2>
+                <div class="box-containers">
+                    <div class="transaction-box">
+                        <h3 class="incomes-title">Przychody:</h3>
+                        <div class="incomes"></div>
+                    </div>
+                    <div class="transaction-box">
+                        <h3 class="outcomes-title">Wydatki:</h3>
+                        <div class="outcomes"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="balance-container">
+                <h2>Dostępne środki:</h2>
+                <div id="balance"><span id="balance-value">9999</span>zł</div>
+                <div class="balance-buttons">
+                    <button id="add-button">
+                        <i class="fa-solid fa-plus"></i> Dodaj transakcję
+                    </button>
+                    <button id="delete-all-button">
+                        <i class="fa-solid fa-trash"></i> Usuń Wszystkie
+                    </button>
+                </div>
+                <h2>Wybierz styl:</h2>
+                <div class="theme-buttons">
+                    <button class="light-theme"></button>
+                    <button class="dark-theme"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="add-transaction">
+            <div class="transaction-container">
+                <h2>Dodaj nową transakcję:</h2>
+                <div class="add-box">
+                    <label for="name-select"
+                        ><h3 class="label-title">Nazwa:</h3>
+                        <p class="label-description">
+                            (podaj nazwę transakcji)
+                        </p></label
+                    >
+                    <input
+                        type="text"
+                        name=""
+                        id="name-select"
+                        class="select"
+                    />
+                </div>
+                <div class="add-box">
+                    <label for="add-amount"
+                        ><h3 class="label-title">Kwota:</h3>
+                        <p class="label-description">
+                            (Podaj kwotę transakcji. Jeśli dodajesz wydatek,
+                            postaw znak minusa na początku kwoty)
+                        </p></label
+                    >
+                    <input type="number" id="add-amount" />
+                </div>
+                <div class="add-box">
+                    <label for="add-category"
+                        ><h3 class="label-title">Wybierz kategorię:</h3>
+                        <p class="label-description">
+                            ([ + ] oznacza przychód. [ - ] oznacza wydatek.]
+                        </p></label
+                    >
+                    <select name="" id="add-category" class="select">
+                        <option value="none" selected disabled></option>
+                        <option value="income">[ + ] Przychód</option>
+                        <option value="shopping">[ - ] Zakupy</option>
+                        <option value="food">[ - ] Jedzenie</option>
+                        <option value="cinema">[ - ] Kino</option>
+                    </select>
+                </div>
+                <div class="panel-buttons">
+                    <button class="save">
+                        <i class="fa-solid fa-floppy-disk"></i> Zapisz
+                    </button>
+                    <button class="cancel">
+                        <i class="fa-solid fa-xmark"></i> Anuluj
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
